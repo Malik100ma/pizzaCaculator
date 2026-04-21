@@ -5,12 +5,21 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.pizzacaculator.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.TextField?>
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.example.pizzacaculator.PizzaController">
+
+   <VBox alignment="CENTER" spacing="10.0">
+      <Label text="🍕 Pizza Calculator"/>
+      <Label text="Піца №1:"/>
+      <TextField fx:id="diametrField1" promptText="Діаметр (см)"/>
+      <TextField fx:id="priceField1" promptText="Ціна (грн)"/>
+      <Label text="Піца №2:"/>
+      <TextField fx:id="diametrField2" promptText="Діаметр (см)"/>
+      <TextField fx:id="priceField2" promptText="Ціна (грн)"/>
+      <Button text="Порівняти" />
+      <Label fx:id="resultLabel" text=" "/>
+   </VBox>
+</StackPane>
