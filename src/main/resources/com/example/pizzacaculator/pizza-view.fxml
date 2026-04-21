@@ -19,7 +19,7 @@
       <Label text="Піца №2:"/>
       <TextField fx:id="diametrField2" promptText="Діаметр (см)"/>
       <TextField fx:id="priceField2" promptText="Ціна (грн)"/>
-      <Button text="Порівняти" />
+      <Button text="Порівняти" onAction="#calculate" />
       <Label fx:id="resultLabel" text=" "/>
    </VBox>
 </StackPane>
