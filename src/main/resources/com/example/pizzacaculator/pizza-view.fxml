@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
+<StackPane prefHeight="320.0" prefWidth="320.0" styleClass="background" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pizzacaculator.PizzaController">
 
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.control.TextField?>
-<StackPane xmlns:fx="http://javafx.com/fxml"
-           fx:controller="com.example.pizzacaculator.PizzaController">
-
-   <VBox alignment="CENTER" spacing="10.0">
-      <Label text="🍕 Pizza Calculator"/>
-      <Label text="Піца №1:"/>
-      <TextField fx:id="diametrField1" promptText="Діаметр (см)"/>
-      <TextField fx:id="priceField1" promptText="Ціна (грн)"/>
-      <Label text="Піца №2:"/>
-      <TextField fx:id="diametrField2" promptText="Діаметр (см)"/>
-      <TextField fx:id="priceField2" promptText="Ціна (грн)"/>
-      <Button text="Порівняти" onAction="#calculate" />
-      <Label fx:id="resultLabel" text=" "/>
+   <VBox alignment="CENTER" prefHeight="354.0" prefWidth="268.0" spacing="10.0" stylesheets="style.css">
+      <Label text="🍕 Pizza Calculator" textFill="WHITE" styleClass="title" />
+      <Label text="Піца №1:" textFill="WHITE" />
+      <TextField fx:id="diametrField1" promptText="Діаметр (см)" />
+      <TextField fx:id="priceField1" promptText="Ціна (грн)" />
+      <Label text="Піца №2:" textFill="WHITE" />
+      <TextField fx:id="diametrField2" promptText="Діаметр (см)" />
+      <TextField fx:id="priceField2" promptText="Ціна (грн)" />
+      <Button onAction="#calculate" styleClass="round-button" text="Порівняти" />
+      <Label fx:id="resultLabel" text=" " />
    </VBox>
 </StackPane>

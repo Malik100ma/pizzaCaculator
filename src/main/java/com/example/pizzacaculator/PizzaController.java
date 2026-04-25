@@ -16,11 +16,23 @@ public class PizzaController {
             double diameter1 = Double.parseDouble(diametrField1.getText());
             double price1 = Double.parseDouble(diametrField1.getText());
 
-            double diameter2 = Double.parseDouble(diametrField1.getText());
-            double price2 = Double.parseDouble(diametrField1.getText());
+            double diameter2 = Double.parseDouble(diametrField2.getText());
+            double price2 = Double.parseDouble(diametrField2.getText());
 
             double Value1 = calculateValua(diameter1, price1);
             double Value2 = calculateValua(diameter2, price2);
+
+            if (Value1 > Value2) {
+                resultLabel.setText("Перша піца вигідна");
+            }
+            else if (Value1 < Value2) {
+                resultLabel.setText("Друга піца вигідна");
+            }
+            else if (Value1 == Value2) {
+                resultLabel.setText("Обі піци вигідні");
+            }
+
+
         } catch (NumberFormatException e) {
             resultLabel.setText("Пишіть цифрами ");
         }
